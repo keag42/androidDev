@@ -37,11 +37,14 @@ android {
 }
 
 dependencies {
-    val roomVersion = "2.8.4"
 
-    implementation("androidx.room:room-runtime:$roomVersion")
-    implementation("androidx.room:room-ktx:$roomVersion")
-    ksp("androidx.room:room-compiler:$roomVersion")
+    implementation("androidx.room:room-runtime:<room-version>")
+    implementation("androidx.room:room-ktx:<room-version>")
+    ksp("androidx.room:room-compiler:<room-version>")
+
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:<lifecycle-version>")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:<lifecycle-version>")
+
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
