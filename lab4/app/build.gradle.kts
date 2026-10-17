@@ -38,12 +38,12 @@ android {
 
 dependencies {
 
-    implementation("androidx.room:room-runtime:<room-version>")
-    implementation("androidx.room:room-ktx:<room-version>")
-    ksp("androidx.room:room-compiler:<room-version>")
+    implementation("androidx.room:room-runtime:2.8.4")
+    implementation("androidx.room:room-ktx:2.8.4")
+    ksp("androidx.room:room-compiler:2.8.4")
 
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:<lifecycle-version>")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:<lifecycle-version>")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:${libs.versions.lifecycleRuntimeKtx.get()}")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:${libs.versions.lifecycleRuntimeKtx.get()}")
 
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
